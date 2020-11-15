@@ -3,10 +3,7 @@
 <p align="center"><b>This is the numix-gtk-theme packaged for snap.</b>
 
 <b>Attributions:</b>
-This snap is packaged from the Numix Project github repository: <a href="https://github.com/numixproject/numix-gtk-theme">numix-gtk-theme</a>. The Numix theme is under a GPL-3.0+ licence.
-
-The snap template was derived from the layan-themes snap maintained by Genadi Naydenov at <a href="https://gitlab.com/gantonayde/layan-themes/">layan-themes</a>.
-
+This snap is packaged from the Numix Project <a href="https://github.com/numixproject/numix-gtk-theme">numix-gtk-theme</a> github repository. The Numix theme is under a GPL-3.0+ licence. The snap template was derived from the <a href="https://gitlab.com/gantonayde/layan-themes/">layan-themes</a> snap maintained by Genadi Naydenov.
 </p>
 
 
