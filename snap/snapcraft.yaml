@@ -1,0 +1,46 @@
+name: numix-gtk-themes
+architectures:
+  - all
+
+version: '0.3'
+summary: Numix GTK theme for GTK Snaps
+description: |
+  A snap that exports the Numix gtk theme
+
+base: core20
+grade: stable
+confinement: strict
+
+slots:
+  gtk-2-themes:
+    interface: content
+    source:
+      read:
+        - $SNAP/share/gtk2/Numix
+
+  gtk-3-themes:
+    interface: content
+    source:
+      read:
+        - $SNAP/share/themes/Numix
+ 
+parts:
+  numix-gtk-themes:
+    plugin: make
+    source: https://github.com/numixproject/numix-gtk-theme.git
+    source-type: git 
+    build-packages: [sassc, libglib2.0-dev, libgdk-pixbuf2.0-dev, libxml2-utils]
+    organize:
+      usr/share/themes/Numix/gtk-2.0/gtkrc: share/gtk2/Numix/gtk-2.0/gtkrc
+      usr/share/themes/*: share/themes/
+    stage:
+      - -usr
+
+  utils:
+    plugin: dump
+    source: utils
+    prime:
+      - -*
+    build-packages:
+      - try: [gtk-update-icon-cache]
+      - else: [libgtk-3-bin]
