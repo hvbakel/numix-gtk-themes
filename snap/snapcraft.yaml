@@ -1,6 +1,5 @@
 name: numix-gtk-themes
 architectures:
-  - build-on: s390x
   - build-on: ppc64el
   - build-on: arm64
   - build-on: armhf
