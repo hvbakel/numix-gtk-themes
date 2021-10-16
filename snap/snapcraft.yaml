@@ -1,6 +1,11 @@
 name: numix-gtk-themes
 architectures:
-  - all
+  - build-on: s390x
+  - build-on: ppc64el
+  - build-on: arm64
+  - build-on: armhf
+  - build-on: amd64
+  - build-on: i386
 
 version: '0.4'
 summary: Numix GTK theme for GTK Snaps
